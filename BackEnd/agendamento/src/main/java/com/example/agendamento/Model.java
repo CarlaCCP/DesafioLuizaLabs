@@ -1,6 +1,6 @@
 package com.example.agendamento;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -20,7 +22,11 @@ public class Model {
 	
 	@Column
 	@NotNull
-	private Date data;
+	private Date dataEnvio;
+	
+	@Column
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataAtual = new java.sql.Date(System.currentTimeMillis());;
 	
 	@Column
 	@NotNull
@@ -34,18 +40,42 @@ public class Model {
 	private String status;
 	
 	
+	//Encapsulamento de dados
 	public Long getId() {
 		return id;
 	}
-
-
-	public Date getData() {
-		return data;
+	
+	
+	public Date getDataEnvio() {
+		return dataEnvio;
 	}
 
-	public void setData(Date data) {
-		this.data = data;
+	public void setDataEnvio(Date dataEnvio) {
+		this.dataEnvio = dataEnvio;
 	}
+	
+	
+
+	public Date getDataAtual() {
+		return dataAtual;
+	}
+
+	public void setDataAtual(Date dataAtual) {
+		this.dataAtual = dataAtual;
+	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	
 
 	public String getDestinatario() {
 		return destinatario;
@@ -54,6 +84,8 @@ public class Model {
 	public void setDestinatario(String destinatario) {
 		this.destinatario = destinatario;
 	}
+	
+	
 
 	public String getMensagem() {
 		return mensagem;
@@ -62,7 +94,6 @@ public class Model {
 	public void setMensagem(String mensagem) {
 		this.mensagem = mensagem;
 	}
-	
 	
 	
 }
