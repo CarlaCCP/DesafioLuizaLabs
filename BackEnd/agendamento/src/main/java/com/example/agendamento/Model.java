@@ -1,6 +1,6 @@
 package com.example.agendamento;
 
-import java.util.Date;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -22,11 +21,11 @@ public class Model {
 	
 	@Column
 	@NotNull
-	private Date dataEnvio;
+	private String dataEnvio;
 	
 	@Column
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date dataAtual = new java.sql.Date(System.currentTimeMillis());;
+	//@Temporal(TemporalType.TIMESTAMP)
+	private String dataAtual; //= new java.sql.Date(System.currentTimeMillis());;
 	
 	@Column
 	@NotNull
@@ -46,21 +45,21 @@ public class Model {
 	}
 	
 	
-	public Date getDataEnvio() {
+	public String getDataEnvio() {
 		return dataEnvio;
 	}
 
-	public void setDataEnvio(Date dataEnvio) {
+	public void setDataEnvio(String dataEnvio) {
 		this.dataEnvio = dataEnvio;
 	}
 	
 	
 
-	public Date getDataAtual() {
+	public String getDataAtual() {
 		return dataAtual;
 	}
 
-	public void setDataAtual(Date dataAtual) {
+	public void setDataAtual(String dataAtual) {
 		this.dataAtual = dataAtual;
 	}
 
@@ -72,7 +71,17 @@ public class Model {
 
 
 	public void setStatus(String status) {
-		this.status = status;
+		String texto; 
+		if (this.dataEnvio == this.dataAtual) {
+			texto = "Enviado";
+			this.status = texto;
+		} else if (this.dataEnvio != this.dataAtual) {
+			texto = "Aguardando envio";
+			this.status = texto;
+		} else {
+			this.status = status;
+		}
+		
 	}
 
 	
