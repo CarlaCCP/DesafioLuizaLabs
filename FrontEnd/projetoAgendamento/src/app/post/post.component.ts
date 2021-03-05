@@ -17,7 +17,7 @@ export class PostComponent implements OnInit {
   }
 
   cadastrando(){
-    if(this.model.dataHora == null || this.model.destinatario == null|| this.model.mensagem == null){
+    if(this.model.destinatario == null|| this.model.mensagem == null){
       window.alert('Todos os campos são obrigatórios')
     } else {
       this.service.postAgendamento(this.model).subscribe((resp: Model)=>{

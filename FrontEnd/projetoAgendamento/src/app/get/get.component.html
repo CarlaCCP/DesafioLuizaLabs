@@ -1,1 +1,29 @@
-<p>get works!</p>
+<div class="container">
+    <div class="row  mt-5 mb-5">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-center">
+                <h1>Status agendamento</h1>
+                
+                </div>
+                <br>
+                <table class="table" >
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Destinatário</th>
+                      <th scope="col">Mensagem</th>
+                      <th scope="col">Data e hora</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor= 'let item of listaAgendamento'>
+                      <th scope="row"></th>
+                      <td>{{item.destinatario}}</td>
+                      <td>{{item.mensagem}}</td>
+                      <td>{{item.dataHora | date:'dd/MM/yyyy'}} às {{item.dataHora | date:'HH:mm'}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+        </div>
+    </div>
+</div>

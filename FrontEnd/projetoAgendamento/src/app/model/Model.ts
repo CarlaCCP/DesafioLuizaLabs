@@ -4,6 +4,7 @@ export class Model{
     public dataHora!: Date
     public destinatario!: string
     public mensagem!: string
+    public status!: string
     
 
 }

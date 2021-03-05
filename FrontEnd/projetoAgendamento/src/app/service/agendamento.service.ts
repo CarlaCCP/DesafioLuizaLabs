@@ -14,6 +14,10 @@ buscarTodos() : Observable<Model[]>{
   return this.http.get<Model[]>('http://localhost:8080/agendamento/status')
 }
 
+buscarUm(id:number) : Observable<Model>{
+  return this.http.get<Model>(`http://localhost:8080/agendamento/um/${id}`)
+}
+
 postAgendamento(model: Model): Observable<Model>{
   return this.http.post<Model>('http://localhost:8080/agendamento/solicitacao', model)
 }
