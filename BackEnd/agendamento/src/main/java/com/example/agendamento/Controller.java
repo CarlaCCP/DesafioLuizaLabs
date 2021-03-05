@@ -28,6 +28,13 @@ public class Controller {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
+	@GetMapping("/um/{id}")
+	public ResponseEntity<Model> GetById(@PathVariable Long id){
+		return repository.findById(id)
+				.map(resp-> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
 	@PostMapping("/solicitacao")
 	public ResponseEntity<Model> post(@RequestBody Model model){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(model));
@@ -39,6 +46,6 @@ public class Controller {
 	}
 	@DeleteMapping("/{id}")
 	public void deletar(@PathVariable Long id) {
-		repository.deleteById(id);;
+		repository.deleteById(id);
 	}
 }
