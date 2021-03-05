@@ -42,9 +42,13 @@ ng serve
 
 ### Testando a aplicação por URL
 
-Deploy da aplicação através do HEROKU, foi necessário trocar o banco de dados da aplicação deploy de MySQL para PostgreSQL
+Deploy da aplicação através do HEROKU, foi necessário trocar o banco de dados da aplicação deploy de MySQL para PostgreSQL.
 
 - https://desafio-agendamento.herokuapp.com/
+
+##### Observação:
+
+Como o servidor é gratuito, se ele não tiver requisições de 30 em 30 minutos ele “dorme” e a próxima pessoa a acessá-lo enfrentará uma pequena demora para visualizar a página, isso por que o servidor estará iniciando.
 
 ### Em construção
 
