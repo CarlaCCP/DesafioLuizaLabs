@@ -1,5 +1,3 @@
-# Desafio LuizaLabs (Java)
-
 Olá, tudo bem? 
 
 Meu nome é Carla Cristina e vou contar um pouco sobre essa aplicação, vamos lá?  🤙
@@ -34,8 +32,28 @@ https://github.com/CarlaCCP/DesafioLuizaLabs.git
 
 - Instale ou start seu servidor local
 
-![2021-03-05](C:\Users\crist\OneDrive\Imagens\Capturas de tela\2021-03-05.png)
+- Abra o diretório Back-end no Spring Boot e rode a aplicação
 
-- Abra o diretório Back-end no Spring Boot e rode a aplicação 
+- Abra o diretório Front-end no Angular e rode a aplicação
 
-  ![2021-03-05 (1)](C:\Users\crist\OneDrive\Imagens\Capturas de tela\2021-03-05 (1).png)
+```
+ng serve
+```
+
+### Testando a aplicação por URL
+
+Deploy da aplicação através do HEROKU, foi necessário trocar o banco de dados da aplicação deploy de MySQL para PostgreSQL
+
+- https://desafio-agendamento.herokuapp.com/
+
+### Em construção
+
+- Elaborar testes unitários para aplicação
+- Tratamento de erros 
+- Trabalhar com o atributo dataHora, torna Date e fazer uma comparação com a data/hora atual. Dessa forma o status da aplicação fluiria entre "Aguardando Envio" e "Enviado"
+
+#### Agradecimentos e considerações finais
+
+Agradeço a oportunidade de realizar este teste e participar deste processo.
+
+Algumas funcionalidades eu não consegui colocar em prática ainda, mas continuarei estudando para melhorar a minha lógica e os processos desta aplicação. 
