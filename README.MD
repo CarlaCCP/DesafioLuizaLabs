@@ -1,3 +1,5 @@
+# Desafio Luiza Labs (Java)
+
 Olá, tudo bem? 
 
 Meu nome é Carla Cristina e vou contar um pouco sobre essa aplicação, vamos lá?  🤙
@@ -6,8 +8,9 @@ Meu nome é Carla Cristina e vou contar um pouco sobre essa aplicação, vamos l
 
 - Java (Orientado à objetos)
 - Spring Boot (Spring Web, Dev Tools e Jpa)
+- APACHE (servidor local)
 - MySQL
-- Swagger 
+- Swagger (para teste de endpoints)
 - Angular (Typescript)
 - Bootstrap (HTML, CSS e JS)
 - GIT e GITHUB
@@ -27,10 +30,10 @@ O padrão consiste nas três camadas que dão o seu nome: Model, View e Controll
 - Clone o repositório da aplicação em sua máquina através do git bash
 
 ```
-https://github.com/CarlaCCP/DesafioLuizaLabs.git
+git clone https://github.com/CarlaCCP/DesafioLuizaLabs.git
 ```
 
-- Instale ou start seu servidor local
+- Instale ou start seu servidor local e configure para rodar na porta 8080
 
 - Abra o diretório Back-end no Spring Boot e rode a aplicação
 
@@ -39,6 +42,12 @@ https://github.com/CarlaCCP/DesafioLuizaLabs.git
 ```
 ng serve
 ```
+
+**Observação:**
+
+Caso queira somente testar os endpoints desta aplicação e o CRUD completo, rode a parte do backend e entre neste link:  http://localhost:8080/swagger-ui.html. Lá você conseguirá testar as requisições. 
+
+Existe também a possibilidade de usar o Postman, basta usar a URL do localHost e testar os endpoints.
 
 ### Testando a aplicação por URL
 
